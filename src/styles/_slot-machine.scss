@@ -15,8 +15,8 @@
         pointer-events: none;
         user-select: none;
         border-radius: 10px;
-        width: 150px;
-        height: 250px;
+        width: 100px;
+        height: 150px;
         box-shadow: 2px 2px 5px grey;
         display: flex;
         justify-content: center;
@@ -48,6 +48,10 @@
 @media only screen and (min-width: 840px) {
     .slot-machine {
         grid-auto-flow: column;
+        #{&}__slot {
+            width: 150px;
+            height: 250px;
+        }
     }
 }
 
