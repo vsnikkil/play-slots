@@ -1,15 +1,22 @@
 .slot-machine {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     gap: 20px;
     padding: 20px;
     justify-content: center;
+
+    #{&}__slots {
+        display: grid;
+        gap: 20px;
+        grid-auto-flow: column;
+    }
+
     #{&}__slot {
         pointer-events: none;
         user-select: none;
         border-radius: 10px;
-        width: 250px;
-        height: 300px;
+        width: 150px;
+        height: 250px;
         box-shadow: 2px 2px 5px grey;
         display: flex;
         justify-content: center;
@@ -36,4 +43,19 @@
 
 .score {
     text-align: center;
+}
+
+@media only screen and (min-width: 840px) {
+    .slot-machine {
+        grid-auto-flow: column;
+    }
+}
+
+@media only screen and (min-width: 1135px) {
+    .slot-machine {
+        #{&}__slot {
+            width: 250px;
+            height: 300px;
+        }
+    }
 }

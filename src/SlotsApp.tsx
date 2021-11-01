@@ -84,13 +84,16 @@ export const SlotMachine = ({
 
     return (
         <div className="slot-machine">
-            {(machineState === "rolling" ? rollingSlotState : slotState).map(
-                (slotEntry, idx) => (
+            <div className="slot-machine__slots">
+                {(machineState === "rolling"
+                    ? rollingSlotState
+                    : slotState
+                ).map((slotEntry, idx) => (
                     <div key={idx} className="slot-machine__slot">
                         {typeToSlotIcon(slotEntry)}
                     </div>
-                )
-            )}
+                ))}
+            </div>
             <button
                 disabled={machineState === "rolling"}
                 onClick={startRoll}
