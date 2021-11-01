@@ -1,0 +1,39 @@
+.slot-machine {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    #{&}__slot {
+        pointer-events: none;
+        user-select: none;
+        border-radius: 10px;
+        width: 250px;
+        height: 300px;
+        box-shadow: 2px 2px 5px grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #{&}__roll {
+        user-select: none;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        align-self: center;
+        font-family: Fruktur;
+        font-size: 74px;
+        background-color: transparent;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.slot-icon {
+    width: 100%;
+}
+
+.score {
+    text-align: center;
+}
